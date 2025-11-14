@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+</head>
+<body>
+    
+    <h2>Exibição de notas</h2>
+
+    <h3>Insira abaixo três notas, e, clicando depois no botão, veja a respectiva média.</h3>
+
+    <input type="number" id="nota1" placeholder="Nota 1">
+
+    <input type="number" id="nota2" placeholder="Nota 2">
+
+    <input type="number" id="nota3" placeholder="Nota 3"> <button id="botao">Lançar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        //chamamento//
+
+        const input1 = document.getElementById('nota1');
+
+        const input2 = document.getElementById('nota2');
+        
+        const input3 = document.getElementById('nota3');
+
+        const botao = document.getElementById('botao');
+
+        const div = document.getElementById('resultado');
+
+        //interação js//
+
+        botao.addEventListener('click', function(){
+
+            const ValorEmNumero1 = Number(input1.value);
+
+            const ValorEmNumero2 = Number(input2.value);
+
+            const ValorEmNumero3 = Number(input3.value);
+
+            const Media = (ValorEmNumero1 + ValorEmNumero2 + ValorEmNumero3)/3;
+
+            const createP = document.createElement('p');
+
+            createP.textContent = `O valor média é igual, a: ${Media}.`;
+
+            div.appendChild(createP);
+
+
+        })
+
+    </script>
+
+</body>
+</html>
